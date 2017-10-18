@@ -21,6 +21,20 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.container {
+  margin: auto;
+    width: 450px;
+    height: 100%
+    /* margin: auto; */
+    text-align: center;   
+    background-color: white;
+    padding-top: 140px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+
+/* div {
+  width: 450px;
+  background-color: white;
+} */

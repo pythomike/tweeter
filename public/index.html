@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <!-- Font -  Roboto Condensed (700 & 300pt) --> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://use.fontawesome.com/b23ce83ccb.js"></script>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -16,11 +19,17 @@
     <!-- Navbar CSS --> 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- Navbar CSS --> 
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+      <!-- Character Counter -->
+      <script type="text/javascript" src="/scripts/char-counter.js"></script>
   </head>
 
   <body>
@@ -33,6 +42,32 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form action="/tweets/" method="POST">
+              <textarea name="text" placeholder="What are you humming about?"></textarea>
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+          </section>
+          <section id ="tweets">
+                                      <article class="tweet">
+                                       <header>
+                                          <img class="tweet-logo" src="/images/laughing_man.jpg">
+                                          <h3>Bill Fields</h3>
+                                          <p>@thisguy</p>
+                                        </header> 
+                                        <p>Little tweet here</p>
+                                        <footer>
+                                          <div class="footer-time">10 days ago</div>
+                                          <div class="footer-icons">
+                                            <i class="fa fa-fire-extinguisher"></i>
+                                            <i class="fa fa-retweet"></i>
+                                            <i class="fa fa-heart"></i>
+                                          </div>
+                                        </footer>
+                                      </article>
+          </section>
     </main>
 
   </body>

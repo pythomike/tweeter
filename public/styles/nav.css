@@ -5,7 +5,7 @@
   background-color: #00a087;
   color: #e8fdff;
   padding-left: 2em;
-  padding-right: 2em;
+  padding-right: 2em; 
 }
 
 #nav-bar .logo {
@@ -20,8 +20,8 @@
   line-height: 2.5;
   font-size: 200%;
   position: fixed;
-  float: left;
-  clear:left;
+  /* float: left;
+  clear:left; */
   margin-left: 10px;
   color: white
 }
