@@ -19,8 +19,11 @@
     <!-- Navbar CSS --> 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- Navbar CSS --> 
+    <!-- New Tweet CSS --> 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet Container -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -31,44 +34,38 @@
       <!-- Character Counter -->
       <script type="text/javascript" src="/scripts/char-counter.js"></script>
   </head>
-
   <body>
-
-    <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/tweeter1.png">
       <span class="header">Tweeter</span>
     </nav>
-
-    <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <form action="/tweets/" method="POST">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
-          <section id ="tweets">
-                                      <article class="tweet">
-                                       <header>
-                                          <img class="tweet-logo" src="/images/laughing_man.jpg">
-                                          <h3>Bill Fields</h3>
-                                          <p>@thisguy</p>
-                                        </header> 
-                                        <p>Little tweet here</p>
-                                        <footer>
-                                          <div class="footer-time">10 days ago</div>
-                                          <div class="footer-icons">
-                                            <i class="fa fa-fire-extinguisher"></i>
-                                            <i class="fa fa-retweet"></i>
-                                            <i class="fa fa-heart"></i>
-                                          </div>
-                                        </footer>
-                                      </article>
-          </section>
+          <h2>Compose Tweet</h2>
+          <form action="/tweets/" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+        <section id ="tweets">
+          <!-- <article class="tweet">
+            <header>
+              <img class="tweet-logo" src="/images/laughing_man.jpg">
+              <h3>Bill Fields</h3>
+              <p class="handle">@thisguy</p>
+            </header> 
+            <p>Little tweet here</p>
+            <footer>
+              <div class="footer-time">10 days ago</div>                      KILL THIS WITH FIRE
+              <div class="footer-icons">
+                <i class="fa fa-fire-extinguisher"></i>
+                <i class="fa fa-retweet"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+            </footer>
+          </article> -->
+        </section>
     </main>
-
   </body>
 </html>
