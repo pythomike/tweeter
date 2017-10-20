@@ -1,5 +1,4 @@
-
-
+//var db = require('../server/lib/in-memory-db.js')(db)
 var data = [
   {
     "user": {
@@ -41,7 +40,7 @@ var data = [
       "handle": "@johann49"
     },
     "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+      "text": "<script>alert('uh oh!')</script>"
     },
     "created_at": 1461113796368
   }
@@ -50,20 +49,21 @@ var data = [
 $(function(){
 
   function renderTweets(tweets) {
-    // loops through tweets
     for (let tweet of tweets){
-      console.log(tweet)
-      debugger
       $('#tweets').prepend(createTweetElement(tweet));
     }
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
   }
   
-
+  function getTweets(){
+    $.ajax({
+      method: 'get',
+      url: '/tweets/',
+    }).done(function(json) {
+    renderTweets(json)
+    })
+  }
 
 function createTweetElement(tweet) {
-  debugger
   return $('<article>', {
     'class': 'tweet',
     html: [
@@ -91,7 +91,7 @@ function createTweetElement(tweet) {
             'class': 'footer-time',
             html: [
               $('<p>', {
-                text: 'created_at'
+                text: tweet.created_at
               })
             ]
           }),
@@ -115,12 +115,27 @@ function createTweetElement(tweet) {
   });
 }
 
+  $('#new-tweet').on('submit', function (event) {
+    event.preventDefault();
+    var textArea = this;
+    console.log(this)
+    var mdata = $(this).serialize();
+    console.log(mdata)
+    $.ajax({
+      method: 'post',
+      url: '/tweets/',
+      data: mdata
+    }).done(function () {
+      textArea.reset();
 
-renderTweets(data);
+      renderTweets(data);
+    });
+  })
 
-// Test / driver code (temporary)
-//console.log($tweet); // to see what it looks like
-//$('#tweets').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-//$('#tweets').prepend($tweet);
+  // Why does renderTweets error out when it is in the event handler for the form submission?
+  // There isn't enough info in here, where am I calling the data-helpers functions
+  
+  
+  getTweets()
 
 })
