@@ -26,3 +26,19 @@
   margin-left: 10px;
   color: white
 }
+
+#nav-bar button{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #E7FDFF;
+  padding: 10px;
+  margin: 10px 0px;
+  height: 60%;
+  width: 120px;
+  float: right;
+  opacity:.6
+}
+#nav-bar button:hover {
+  opacity: 1;     
+  border: 1.5px solid black        
+}
