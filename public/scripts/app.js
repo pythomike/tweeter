@@ -91,7 +91,7 @@ $("#compose").on("click", function() {
       }).done(function () {
         textArea.reset();
       })
-        loadTweets();             //Render tweets no longer works...da fuq?!
+        loadTweets();             
     }
   })
     
