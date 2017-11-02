@@ -21,3 +21,8 @@ This repository is the starter code for the project: Students will fork and clon
 - MD5 2.1.0
 - Moment 2.19.1
 - Mongodb 2.2.33
+
+## Screenshots
+!["Screenshot of compose form"](https://github.com/pythomike/tweeter/blob/master/docs/compose.png?raw=true)
+!["Screenshot of collapsed compose form"](https://github.com/pythomike/tweeter/blob/master/docs/collapsed_compose.png?raw=true)
+!["Screenshot of tweets"](https://github.com/pythomike/tweeter/blob/master/docs/tweets.png?raw=true)
